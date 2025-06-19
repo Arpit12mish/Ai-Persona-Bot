@@ -11,7 +11,7 @@ load_dotenv()
 api_key = os.getenv("OPENAI_API_KEY")
 
 # ✅ Correct usage: Pass the key explicitly
-client = OpenAI(api_key)
+client = OpenAI(api_key=api_key)
 
 
 SYSTEM_PROMPT = """
