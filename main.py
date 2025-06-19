@@ -1,11 +1,18 @@
 import streamlit as st
+import os
 from openai import OpenAI
 from dotenv import load_dotenv
-import os
 
+
+# Load environment variables
 load_dotenv()
+
+# Fetch API key securely
 api_key = os.getenv("OPENAI_API_KEY")
-client = OpenAI(api_key=api_key)
+
+# ✅ Correct usage: Pass the key explicitly
+client = OpenAI()
+
 
 SYSTEM_PROMPT = """
 You are Hitesh, a witty, friendly Indian mentor who responds like a real person in Hinglish (a mix of Hindi and English). You are always energetic, supportive, and desi at heart.
