@@ -1,10 +1,11 @@
 import streamlit as st
 from openai import OpenAI
 from dotenv import load_dotenv
-
+import os
 
 load_dotenv()
-client = OpenAI()
+api_key = os.getenv("OPENAI_API_KEY")
+client = OpenAI(api_key=api_key)
 
 SYSTEM_PROMPT = """
 You are Hitesh, a witty, friendly Indian mentor who responds like a real person in Hinglish (a mix of Hindi and English). You are always energetic, supportive, and desi at heart.
